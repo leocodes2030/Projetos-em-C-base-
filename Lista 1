@@ -107,9 +107,66 @@ int main() {
     return 0;
 }
 
+--------
+
+1.5: Problema: Um marceneiro tem
+uma tábua de madeira de tamanho T (em centímetros). Ele quer cortar essa tábua
+em pedaços exatos de tamanho P. Leia T e P. Exiba quantos pedaços inteiros ele
+vai conseguir cortar e quantos centímetros vão sobrar. Dica: Use o operador de
+resto da divisão (%) para a sobra.
+
+#include <stdio.h>
+
+int main() {
+    int T, P, inteiros, sobras;
+    
+    printf("Qual o tamanho da tábua? (em centimetros)\n");
+    scanf("%d", &T);
+    
+    printf("Qual o tamanho das partes que você quer? (em centimetros)\n");
+    scanf("%d", &P);
+    
+    inteiros = T/P;
+    sobras = T % P;
+    
+    printf("\n--- Resultado ---");
+    printf("\nQuantidade de pedaços inteiros: %d", inteiros);
+    printf("\nCentimetros restantes: %d cm\n", sobras);
+
+    return 0;
+}
+
+--------
+
+1.6: Problema: Leia o nome de um vendedor, seu salário
+fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este
+vendedor ganha 15% de comissão sobre suas vendas, calcule e imprima o total a
+receber no final do mês com duas casas decimais.
 
 
+#include <stdio.h>
 
+int main() {
+    char nome[50];
+    float salariofx, totalvenda, totalsal;
+    
+    printf("Digite seu nome: ");
+    scanf("%s", nome);
+    printf("Agora seu salario fixo: ");
+    scanf("%f", &salariofx);
+    printf("E por fim seu total de vendas no mês(em dinheiro): ");
+    scanf("%f", &totalvenda);
+    
+    totalsal=salariofx + (totalvenda*0.15);
+    
+    printf("Sr. %s, seu salario desse mês será de %.2f.", nome, totalsal);
+    
+    return 0;
+}
+
+--------
+
+1.7: 
 
 
   
